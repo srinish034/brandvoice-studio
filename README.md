@@ -44,7 +44,7 @@ Check the backend is up: http://localhost:3000/api/health
 
 ## Live demo
 
-**Try it here: [ https://your-app.onrender.com**](https://brandvoice-studio.onrender.com)
+**Try it here: [(https://brandvoice-studio.onrender.com)**](https://brandvoice-studio.onrender.com)
 
 The app is hosted on Render's free plan, so it sleeps when idle. If the page takes up to a minute to load the first time, please wait and it will start.
 
