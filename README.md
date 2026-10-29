@@ -42,9 +42,33 @@ Check the backend is up: http://localhost:3000/api/health
 | `npm test` | Backend tests (validation, retry, routes, CORS, rate limit). They do **not** call Gemini |
 | `npm run test:brands` | Runs two contrasting brands through the real API and saves results to `evidence/` (needs your key) |
 
+## Live demo
+
+**Try it here: [ https://your-app.onrender.com**](https://brandvoice-studio.onrender.com)
+
+The app is hosted on Render's free plan, so it sleeps when idle. If the page takes up to a minute to load the first time, please wait and it will start.
+
+### How to test it
+
+1. Open the live link above.
+2. In **Brand name**, enter a brand you want to test (for example, *Nike* or *Apple*). Everything else is optional.
+3. Optionally choose an **Industry**, a **Campaign objective** and a **Preferred tone**, and add **Product or campaign details**, **Target audience** or **Existing social media posts** for a more tailored result.
+4. Click **Generate** and wait a few seconds.[5s-20s]
+5. On the right, you will see:
+   - a **Brand voice summary** that describes the brand's tone, personality, audience and content themes, and
+   - **10 tweet drafts**, each with its style label, character count and a **Copy tweet** button.
+
+### Notes
+
+- If you leave **Preferred tone** blank, the 10 tweets use a mix of conversational, promotional, witty and informative styles. If you choose a tone, all 10 tweets are written in that tone. The brand voice summary is not affected by the tone you choose.
+- The voice is inferred only from the information you enter. No social media accounts are checked.
+- To keep the AI quota safe, each visitor can generate up to 20 times every 15 minutes.
+
+
+
 ## Environment variables
 
-Copy `.env.example` to `.env`. Never commit `.env` (it is in `.gitignore`).
+Copy `.env.example` to `.env` (it is in `.gitignore`).
 
 | Variable | Where | Purpose |
 |---|---|---|
