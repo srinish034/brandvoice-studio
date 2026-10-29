@@ -1,0 +1,17 @@
+# Render Blueprint: one web service that builds the React app and serves it
+# together with the Express API (same origin, so no CORS setup is needed).
+services:
+  - type: web
+    name: brandvoice-studio
+    runtime: node
+    plan: free
+    buildCommand: npm install --include=dev && npm run build
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: GEMINI_MODEL
+        value: gemini-3.5-flash-lite
+      - key: GEMINI_API_KEY
+        sync: false # you paste the value in the Render dashboard; it is never stored in Git
